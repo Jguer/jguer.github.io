@@ -22,7 +22,7 @@
         background-color: #1c1e26;
       }
 
-      .link-list {
+      .column-list {
         background-color: #2e303e;
         border-radius: 4px;
         color: #7a7a7a;
@@ -75,8 +75,8 @@
     </section>
     <section class="section">
       <div class="columns">
-        <div class="column is-one-quarter">
-          <div class="link-list">
+        <div class="column">
+          <div class="column-list">
             <h3>
               <i class="fas fa-users"></i>
               Social
@@ -97,8 +97,8 @@
             </ul>
           </div>
         </div>
-        <div class="column is-one-quarter">
-          <div class="link-list">
+        <div class="column">
+          <div class="column-list">
             <h3>
               <i class="fas fa-briefcase"></i>
               Work
@@ -107,17 +107,11 @@
               <li>
                 <a href="https://github.com/">Github</a>
               </li>
-              <li>
-                <a href="https://hackerschool-ist.slack.com/">HS Slack</a>
-              </li>
-              <li>
-                <a href="http://discourse.hackerschool.io/">HS Discourse</a>
-              </li>
             </ul>
           </div>
         </div>
-        <div class="column is-one-quarter">
-          <div class="link-list">
+        <div class="column">
+          <div class="column-list">
             <h3>
               <i class="fas fa-video"></i>
               Media
@@ -138,8 +132,8 @@
             </ul>
           </div>
         </div>
-        <div class="column is-one-quarter">
-          <div class="link-list">
+        <div class="column">
+          <div class="column-list">
             <h3>
               <i class="fas fa-download"></i>
               Yo-ho-ho
@@ -166,43 +160,43 @@
 </html>
 <script>
   var today = new Date();
-  document.getElementById("date").innerHTML = formatAMPM();
+  document.getElementById('date').innerHTML = formatAMPM();
 
   function formatAMPM() {
     var d = new Date(),
       minutes =
         d.getMinutes().toString().length == 1
-          ? "0" + d.getMinutes()
+          ? '0' + d.getMinutes()
           : d.getMinutes(),
       hours =
-        d.getHours().toString().length == 1 ? "0" + d.getHours() : d.getHours(),
-      ampm = d.getHours() >= 12 ? "PM" : "AM",
+        d.getHours().toString().length == 1 ? '0' + d.getHours() : d.getHours(),
+      ampm = d.getHours() >= 12 ? 'PM' : 'AM',
       months = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec"
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec'
       ],
-      days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     return (
       days[d.getDay()] +
-      " " +
+      ' ' +
       months[d.getMonth()] +
-      " " +
+      ' ' +
       d.getDate() +
-      " " +
+      ' ' +
       d.getFullYear() +
-      " " +
+      ' ' +
       hours +
-      ":" +
+      ':' +
       minutes +
       ampm
     );
